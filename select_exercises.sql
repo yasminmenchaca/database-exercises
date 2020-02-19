@@ -1,31 +1,25 @@
 USE codeup_test_db;
 
-SELECT 'Pink Floyd' AS 'Here are the albums from:';
-SELECT *
+SELECT name AS 'Here are the albums from:'
 FROM albums
 WHERE artist = 'Pink Floyd';
 
-SELECT 'The Beatles' AS 'The year Sgt. Pepper''s Lonely Hearts Club Band was released: ';
-SELECT release_date
+SELECT release_date AS 'The year Sgt. Pepper''s Lonely Hearts Club Band was released: '
 FROM albums
 WHERE name = 'Sgt. Pepper''s Lonely Hearts Club Band';
 
-SELECT 'Nirvana' AS 'The genre for Nevermind: ';
-SELECT genre
+SELECT genre AS 'The genre for Nevermind: '
 FROM albums
 WHERE name = 'Nevermind';
 
-SELECT 'the 1990''s' AS 'Albums released in the 1990s: ';
-SELECT name
+SELECT name AS 'Albums released in the 1990s: '
 FROM albums
 WHERE release_date BETWEEN 1990 AND 1999;
 
-SELECT 'Less than 20 million' AS 'Albums that had less than 20 million certified sales: ';
-SELECT *
+SELECT name AS 'Albums that had less than 20 million certified sales: '
 FROM albums
 WHERE sales < 20;
 
-SELECT 'Rock' AS 'All the albums with a genre of "Rock": ';
-SELECT name
+SELECT name AS 'All the albums with a genre of "Rock": '
 FROM albums
-WHERE genre = 'Rock';
+WHERE genre LIKE 'Rock';
