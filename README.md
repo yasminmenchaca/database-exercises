@@ -1,1 +1,3 @@
 # database-exercises
+
+MySQL Exercises.
