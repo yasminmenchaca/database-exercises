@@ -4,7 +4,6 @@ DROP TABLE IF EXISTS albums;
 
 USE codeup_test_db;
 
--- creates 'albums' table if it doesn't exist;
 CREATE TABLE IF NOT EXISTS albums
 (
     id           INT UNSIGNED NOT NULL AUTO_INCREMENT,
