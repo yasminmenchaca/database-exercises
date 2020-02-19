@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS codeup_test_db;
 
+DROP TABLE IF EXISTS albums;
+
 USE codeup_test_db;
 
 -- creates 'albums' table if it doesn't exist;
