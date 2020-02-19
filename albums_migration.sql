@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS codeup_test_db;
 
 USE codeup_test_db;
 
-CREATE TABLE albums
+CREATE TABLE IF NOT EXISTS albums
 (
     id           INT UNSIGNED   NOT NULL AUTO_INCREMENT,
     artist       VARCHAR(50)    NOT NULL,
