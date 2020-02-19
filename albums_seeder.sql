@@ -1,4 +1,5 @@
 USE codeup_test_db;
+
 INSERT INTO albums(artist, name, release_date, sales, genre)
 VALUES ('Michael Jackson', 'Thriller', 1982, 47.3, 'Pop, rock, R&B');
 INSERT INTO albums(artist, name, release_date, sales, genre)
@@ -48,7 +49,7 @@ VALUES ('Madonna', 'The Immaculate Collection', 1990, 19.4, 'Pop, dance');
 INSERT INTO albums(artist, name, release_date, sales, genre)
 VALUES ('The Beatles', 'Abbey Road', 1969, 14.4, 'Rock');
 INSERT INTO albums(artist, name, release_date, sales, genre)
-VALUES ('Bruce Springsteen', 'Born in the U.S.A', 1984, 19.6, 'Hearland rock');
+VALUES ('Bruce Springsteen', 'Born in the U.S.A', 1984, 19.6, 'Heartland rock');
 INSERT INTO albums(artist, name, release_date, sales, genre)
 VALUES ('Dire Straits', 'Brothers in Arms', 1985, 17.7, 'Roots rock, blues rock, soft rock');
 INSERT INTO albums(artist, name, release_date, sales, genre)
