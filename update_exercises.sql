@@ -2,7 +2,8 @@ USE codeup_test_db;
 
 
 # All albums in your table.
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
@@ -10,7 +11,8 @@ SELECT artist       AS "Artist",
 FROM albums;
 
 # All albums released before 1980
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
@@ -19,7 +21,8 @@ FROM albums
 where release_date < 1980;
 
 # All albums by Michael Jackson
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
@@ -33,7 +36,8 @@ where artist = 'Michael Jackson';
 update albums
 set sales = sales * 10;
 
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
@@ -45,7 +49,8 @@ update albums
 set release_date = release_date - 100
 where release_date < 1980;
 
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
@@ -58,7 +63,8 @@ update albums
 set artist = 'Peter Jackson'
 where artist = 'Michael Jackson';
 
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",

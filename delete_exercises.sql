@@ -1,7 +1,8 @@
 USE codeup_test_db;
 
 # Albums released after 1991
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
@@ -14,7 +15,8 @@ FROM albums
 WHERE release_date > 1991;
 
 # Albums with the genre 'disco'
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
@@ -27,7 +29,8 @@ FROM albums
 WHERE genre = 'Disco';
 
 # Albums by 'Whitney Houston' (...or maybe an artist of your choice)
-SELECT artist       AS "Artist",
+SELECT id           AS "ID",
+       artist       AS "Artist",
        name         AS "Album",
        release_date AS "Release Year",
        sales        AS "Sales",
