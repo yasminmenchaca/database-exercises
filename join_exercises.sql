@@ -24,15 +24,26 @@ order by dept_name;
 
 # Find the current titles of employees currently working in the Customer Service department.
 
-SELECT t.title  AS 'Title',
-       COUNT(*) AS 'Count'
-FROM titles as t
-         JOIN employees e on t.emp_no = e.emp_no
-         JOIN dept_emp de on e.emp_no = de.emp_no
-WHERE t.to_date > NOW()
-  AND de.to_date > NOW()
-  and dept_no = 'd009'
-group by t.title;
+# SELECT t.title  AS 'Title',
+#        COUNT(*) AS 'Count'
+# FROM titles as t
+#          JOIN employees e on t.emp_no = e.emp_no
+#          JOIN dept_emp de on e.emp_no = de.emp_no
+# WHERE t.to_date > NOW()
+#   AND de.to_date > NOW()
+#   and dept_no = 'd009'
+# group by t.title;
+
+-- or
+
+SELECT t.title AS 'Title', COUNT(*) AS 'Count'
+FROM departments as d
+         JOIN dept_emp de on d.dept_no = de.dept_no
+         JOIN titles t on t.emp_no = de.emp_no
+WHERE de.to_date > NOW()
+  and t.to_date > NOW()
+  and d.dept_name = 'Customer Service'
+GROUP BY t.title;
 
 # Find the current salary of all current managers.
 
@@ -48,7 +59,7 @@ WHERE dm.to_date > NOW()
   and salaries.to_date > NOW()
 ORDER BY d.dept_name;
 
-# Bonus Find the names of all current employees, their department name, and their current manager's name.
+# Bonus -- Find the names of all current employees, their department name, and their current manager's name.
 
 SELECT concat(employees.first_name, ' ', employees.last_name) AS 'Employee Name',
        d.dept_name                                            AS 'Department Name',
@@ -64,3 +75,4 @@ FROM employees
               ON m.emp_no = managers.emp_no
 WHERE de.to_date > NOW()
   AND m.to_date > NOW();
+
